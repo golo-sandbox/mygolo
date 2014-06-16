@@ -66,13 +66,13 @@ if "%JAVACMD%"=="" set JAVACMD=java
 
 if "%REPO%"=="" set REPO=%BASEDIR%\lib
 
-set CLASSPATH="%BASEDIR%"\etc;"%REPO%"\asm-4.2.jar;"%REPO%"\jcommander-1.32.jar;"%REPO%"\txtmark-0.11.jar;"%REPO%"\golo-0-preview11-SNAPSHOT.jar
+set CLASSPATH="%BASEDIR%"\etc;"%REPO%"\asm-4.2.jar;"%REPO%"\json-simple-1.1.1.jar;"%REPO%"\jcommander-1.35.jar;"%REPO%"\txtmark-0.11.jar;"%REPO%"\golo-1.0.0-SNAPSHOT.jar
 goto endInit
 
 @REM Reaching here means variables are defined and arguments have been captured
 :endInit
 
-%JAVACMD% %JAVA_OPTS%  -classpath %CLASSPATH_PREFIX%;%CLASSPATH% -Dapp.name="vanilla-golo" -Dapp.repo="%REPO%" -Dapp.home="%BASEDIR%" -Dbasedir="%BASEDIR%" fr.insalyon.citi.golo.cli.Main %CMD_LINE_ARGS%
+%JAVACMD% %JAVA_OPTS% -Xms256m -Xmx1024M -Xss1024M -server -XX:-TieredCompilation -XX:+AggressiveOpts -classpath %CLASSPATH_PREFIX%;%CLASSPATH% -Dapp.name="golo" -Dapp.repo="%REPO%" -Dapp.home="%BASEDIR%" -Dbasedir="%BASEDIR%" fr.insalyon.citi.golo.cli.Main %CMD_LINE_ARGS%
 if %ERRORLEVEL% NEQ 0 goto error
 goto end
 

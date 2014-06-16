@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/3726/golo-lang/golo-lang.png)](https://zenodo.org/record/10272)
+
 # Golo, a lightweight dynamic language for the JVM.
 
 > The world didn't need another JVM language.
@@ -5,7 +7,7 @@
 
 Golo is a simple dynamic, weakly-typed language for the JVM.
 
-Built from day 1 with `invokedynamic`, Golo takes advantage of the latest advances of 
+Built from day 1 with `invokedynamic`, Golo takes advantage of the latest advances of
 the JVM. It is also a showcase on how to build a language runtime with `invokedynamic`.
 
 Golo is being developed as part of the research activities of the
@@ -18,7 +20,17 @@ Golo is being developed as part of the research activities of the
 * GitHub: [https://github.com/golo-lang/golo-lang](https://github.com/golo-lang/golo-lang)
 * Mailing-list: [http://groups.google.com/group/golo-lang](http://groups.google.com/group/golo-lang)
 * StackOverflow: [questions with the `golo-lang` tag](http://stackoverflow.com/questions/tagged/golo-lang)
-* IRC: [`#golo-lang` on Freenode](https://webchat.freenode.net/)
+
+Starting from version 1.0.0, Golo adopts the [semantic versioning scheme](http://semver.org).
+
+## Getting Golo
+
+Go to the [Golo downloads page](http://golo-lang.org/download/) for general download instructions.
+
+You can fetch Golo from Maven central under the `org.golo-lang` group.
+
+We also provide [Docker](http://docker.com/) images based on Ubuntu 14.04 and Java SE 8:
+`docker pull jponge/golo-lang` ([https://registry.hub.docker.com/u/jponge/golo-lang/](https://registry.hub.docker.com/u/jponge/golo-lang/))
 
 ## Building Golo
 
@@ -108,11 +120,10 @@ Big thanks to our early testers before Golo was made public! *(in random order)*
 
 Pierre Colomb, Olivier Coupelon, Cédric Exbrayat, Frédéric Le Mouel, Nicolas Stouls,
 Henri Gomez, Julien Viet, Philippe Charrière, Ludovic Champenois, Thierry Chantier,
-Daniel Petisme, David Gageot, David Festal, Gildas Cuisinier, Thomas Maurel, 
+Daniel Petisme, David Gageot, David Festal, Gildas Cuisinier, Thomas Maurel,
 Yannick Loiseau, Alexis Plantin, Sylvain Desgrais, William Guyot, Agnès Crépet, Cyril Lacote.
 
 ### Companies
 
-[Serli](http://www.serli.com/), 
+[Serli](http://www.serli.com/),
 [Ninja Squad](http://ninja-squad.com/).
-
